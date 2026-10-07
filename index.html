@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Linda Maphiri: Ministry, Philanthropist, Businesswoman, Mother, Wife and Speaker. Founder of Queening and Winning.">
+<title>Linda Maphiri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Jost:wght@300;400;500;600&family=Pinyon+Script&display=swap">
+<style>
+/* Layout: editorial portfolio. Oversized Bodoni name over an arched portrait, a crowns grid for her six roles,
+   a deep-wine band for Queening & Winning, and an events ledger with a demo ticket checkout. */
+:root{
+  --bg:#FBF6F1;        /* ivory */
+  --surface:#F4E8E4;   /* blush paper */
+  --ink:#2A0F17;       /* wine-black text */
+  --muted:#76555E;
+  --wine:#6E1426;      /* primary accent */
+  --rose:#C2456F;      /* "a touch of pink" */
+  --gold:#A87B32;
+  --line:#E3D2CE;
+  --deep:#3A0A17;      /* Queening & Winning band */
+  --deep-fg:#F8EEE7;
+  --deep-gold:#D9B26A;
+  --btn-fg:#FBF6F1;
+  --f-display:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+  --f-body:"Jost","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --f-script:"Pinyon Script","Snell Roundhand","Brush Script MT",cursive;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#160A0E;--surface:#22121A;--ink:#F5EAE4;--muted:#BFA2A9;--wine:#E7A3B5;--rose:#F07FA3;--gold:#D9B26A;
+  --line:#3A2229;--deep:#2C0D16;--deep-fg:#F8EEE7;--deep-gold:#D9B26A;--btn-fg:#1A0A10;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#160A0E;--surface:#22121A;--ink:#F5EAE4;--muted:#BFA2A9;--wine:#E7A3B5;--rose:#F07FA3;--gold:#D9B26A;
+  --line:#3A2229;--deep:#2C0D16;--deep-fg:#F8EEE7;--deep-gold:#D9B26A;--btn-fg:#1A0A10;color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.65;font-weight:400}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin-inline:auto;padding-inline:clamp(16px,4vw,40px)}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.02;margin:0;text-wrap:balance}
+h2{font-size:clamp(2.3rem,5.5vw,4.2rem);letter-spacing:-.01em}
+h3{font-size:1.55rem;line-height:1.15}
+p{margin:0}
+.eyebrow{font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:var(--gold)}
+.script{font-family:var(--f-script);font-weight:400;color:var(--rose);font-size:2.1rem;line-height:1}
+.lede{font-size:1.08rem;color:var(--muted);max-width:60ch}
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px}
+
+.btn{display:inline-flex;align-items:center;gap:.5em;font:500 .8rem/1 var(--f-body);letter-spacing:.16em;text-transform:uppercase;
+  padding:1.05em 1.7em;border-radius:999px;border:1px solid var(--wine);background:var(--wine);color:var(--btn-fg);cursor:pointer;text-decoration:none;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--wine)}
+.btn.gold{background:var(--deep-gold);border-color:var(--deep-gold);color:#2A0A12}
+.btn.ghost-light{background:transparent;border-color:var(--deep-fg);color:var(--deep-fg)}
+
+/* Demo ribbon */
+.ribbon{background:var(--ink);color:var(--bg);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:.55em 16px}
+
+/* Nav */
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.85rem}
+.mark{font-family:var(--f-display);font-size:1.3rem;text-decoration:none;letter-spacing:.02em;white-space:nowrap}
+.mark i{color:var(--rose)}
+.nav ul{display:flex;gap:1.6rem;list-style:none;margin:0;padding:0;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase}
+.nav ul a{text-decoration:none;color:var(--muted)}
+.nav ul a:hover{color:var(--wine)}
+.nav .btn{padding:.8em 1.2em;font-size:.7rem}
+@media (max-width:900px){.nav ul{display:none}}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;padding-block:clamp(2.5rem,6vw,5rem) clamp(3rem,6vw,5rem)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(1.5rem,4vw,4rem);align-items:center}
+.hero h1{font-size:clamp(3.6rem,11vw,9.6rem);line-height:.86;letter-spacing:-.025em;margin-block:.6rem 1.4rem}
+.hero h1 em{font-style:italic;color:var(--wine);display:block;padding-left:.6em}
+.roles{display:flex;flex-wrap:wrap;gap:.35rem .9rem;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);max-width:34rem}
+.roles span+span::before{content:"✦";color:var(--gold);margin-right:.9rem;font-size:.6rem;vertical-align:.15em}
+.hero .quote{margin-top:2rem;padding-left:1.2rem;border-left:1px solid var(--gold);max-width:30rem;font-family:var(--f-display);font-style:italic;font-size:1.35rem;line-height:1.35}
+.hero .quote small{display:block;font:500 .7rem/1.4 var(--f-body);letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:.6rem;font-style:normal}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.arch{position:relative;justify-self:center;width:min(100%,430px)}
+.arch .frame{aspect-ratio:4/5;border-radius:999px 999px 14px 14px;overflow:hidden;background:var(--surface);max-width:100%}
+.arch .frame img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;transform:scale(1.12)}
+.arch::before{content:"";position:absolute;inset:-14px -14px auto -14px;height:calc(100% + 28px);border:1px solid var(--gold);border-radius:999px 999px 20px 20px;pointer-events:none}
+.arch .tag{position:absolute;left:-1.5rem;bottom:2.2rem;background:var(--bg);border:1px solid var(--line);padding:.8rem 1rem;border-radius:12px;font-size:.78rem;line-height:1.35;max-width:14rem;box-shadow:0 12px 30px -18px rgba(40,10,20,.45)}
+.arch .tag b{display:block;font-family:var(--f-display);font-weight:500;font-size:1.05rem}
+@media (max-width:820px){.hero-grid{grid-template-columns:1fr}.arch{order:-1;width:min(78%,360px)}.arch .tag{left:0}.hero h1 em{padding-left:.3em}}
+
+/* Marquee */
+.marquee{border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;padding-block:1.1rem;background:var(--surface)}
+.marquee .track{display:inline-flex;gap:2.5rem;animation:slide 38s linear infinite;font-family:var(--f-display);font-size:clamp(1.8rem,4vw,3rem);font-style:italic;color:var(--wine)}
+.marquee .track span::after{content:"♛";font-style:normal;color:var(--gold);font-size:.55em;margin-left:2.5rem;vertical-align:.25em}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+section{padding-block:clamp(4rem,9vw,7rem)}
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:end;margin-bottom:3rem}
+.sec-head > *{min-width:0}
+@media (max-width:820px){.sec-head{grid-template-columns:1fr}}
+
+/* Story / crowns */
+.story-intro{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,5vw,5rem);align-items:start;margin-bottom:4rem}
+.story-intro > *{min-width:0}
+.story-intro img{border-radius:14px;aspect-ratio:3/4;object-fit:cover;width:100%;object-position:50% 15%}
+.story-intro .copy{display:grid;gap:1.2rem;align-content:start}
+.story-intro .copy p{max-width:60ch}
+.dropcap::first-letter{font-family:var(--f-display);float:left;font-size:4.4rem;line-height:.8;padding:.35rem .6rem 0 0;color:var(--wine)}
+@media (max-width:820px){.story-intro{grid-template-columns:1fr}.story-intro img{max-width:380px}}
+.crowns{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.crown{padding:2rem 1.8rem 2.2rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;gap:.7rem;align-content:start;transition:background .25s}
+.crown:hover{background:var(--surface)}
+.crown .k{font-family:var(--f-display);font-style:italic;color:var(--rose);font-size:1rem}
+.crown p{color:var(--muted);font-size:.96rem}
+@media (max-width:900px){.crowns{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.crowns{grid-template-columns:1fr}}
+
+/* Ventures */
+.ventures{background:var(--surface)}
+.v-grid{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:1.2rem}
+.v-card{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:2rem;display:grid;gap:1rem;align-content:start;min-width:0}
+.v-card.lead{grid-row:span 2;background:var(--wine);border-color:var(--wine);color:var(--btn-fg)}
+.v-card.lead .eyebrow{color:var(--btn-fg);opacity:.8}
+.v-card.lead h3{font-size:2.3rem}
+.v-card.lead p{opacity:.88}
+.v-card .role{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.v-card.lead .role{color:var(--btn-fg);opacity:.75}
+.pills{display:flex;flex-wrap:wrap;gap:.5rem}
+.pill{border:1px solid currentColor;border-radius:999px;padding:.35em .9em;font-size:.78rem;letter-spacing:.06em}
+.v-card .glyph{font-family:var(--f-display);font-size:2.6rem;line-height:1;color:var(--gold)}
+@media (max-width:900px){.v-grid{grid-template-columns:1fr 1fr}.v-card.lead{grid-column:1/-1;grid-row:auto}}
+@media (max-width:560px){.v-grid{grid-template-columns:1fr}}
+
+/* Queening & Winning band */
+.qw{background:var(--deep);color:var(--deep-fg);position:relative;overflow:hidden}
+.qw::before{content:"Q";position:absolute;right:-2rem;top:-6rem;font-family:var(--f-display);font-style:italic;font-size:42rem;line-height:1;color:var(--deep-gold);opacity:.07;pointer-events:none}
+.qw .eyebrow{color:var(--deep-gold)}
+.qw .script{color:var(--deep-gold)}
+.qw .lede{color:color-mix(in srgb,var(--deep-fg) 78%,transparent)}
+.qw-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,5rem);align-items:center;position:relative}
+.qw-grid > *{min-width:0}
+.qw h2 em{color:var(--deep-gold)}
+.pillars{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:color-mix(in srgb,var(--deep-gold) 35%,transparent);margin-top:2.4rem;border:1px solid color-mix(in srgb,var(--deep-gold) 35%,transparent)}
+.pillars div{background:var(--deep);padding:1.3rem 1.2rem}
+.pillars b{font-family:var(--f-display);font-weight:500;font-size:1.15rem;display:block;margin-bottom:.25rem}
+.pillars span{font-size:.9rem;opacity:.78}
+.qw-photo{position:relative}
+.qw-photo img{border-radius:14px;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:75% 30%}
+.qw-photo figcaption{font-size:.78rem;opacity:.7;margin-top:.7rem}
+.autism{margin-top:4rem;display:grid;grid-template-columns:auto 1fr auto;gap:2rem;align-items:center;border-top:1px solid color-mix(in srgb,var(--deep-gold) 35%,transparent);padding-top:2.5rem;position:relative}
+.autism > *{min-width:0}
+.autism .inf{font-family:var(--f-display);font-size:4rem;line-height:1;color:var(--deep-gold)}
+.autism h3{margin-bottom:.4rem}
+@media (max-width:820px){.qw-grid,.autism{grid-template-columns:1fr}.pillars{grid-template-columns:1fr}}
+
+/* Events */
+.featured{display:grid;grid-template-columns:.8fr 1.2fr;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--bg)}
+.featured > *{min-width:0}
+.featured .poster{background:var(--surface)}
+.featured .poster{display:grid;place-items:center;padding:1rem}
+.featured .poster img{width:100%;height:auto;border-radius:8px}
+.featured .body{padding:clamp(1.5rem,4vw,3rem);display:grid;gap:1.3rem;align-content:start}
+.badge{display:inline-flex;align-items:center;gap:.5em;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--rose)}
+.badge::before{content:"";width:.5em;height:.5em;border-radius:50%;background:var(--rose)}
+.featured h3{font-size:clamp(1.9rem,3.6vw,2.8rem)}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;border-block:1px solid var(--line);padding-block:1.1rem}
+.facts div{min-width:0}
+.facts dt{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.facts dd{margin:0;font-family:var(--f-display);font-size:1.15rem;line-height:1.25}
+.lineup{display:grid;grid-template-columns:1fr 1fr;gap:1rem;font-size:.92rem}
+.lineup b{display:block;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.lineup ul{margin:.3rem 0 0;padding-left:1.1rem;color:var(--muted)}
+.speaker-row{display:flex;gap:1rem;align-items:center;background:var(--surface);border-radius:14px;padding:.8rem}
+.speaker-row img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex:none}
+.speaker-row p{font-size:.9rem;color:var(--muted)}
+.speaker-row strong{color:var(--ink);font-weight:500}
+@media (max-width:860px){.featured{grid-template-columns:1fr}.featured .poster img{max-height:420px}.facts{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.lineup{grid-template-columns:1fr}}
+
+.next-row{display:grid;grid-template-columns:auto 1fr auto;gap:1.5rem;align-items:center;padding:1.6rem 0;border-bottom:1px solid var(--line);margin-top:1.5rem}
+.next-row > *{min-width:0}
+.datebox{width:5.2rem;text-align:center;border:1px solid var(--wine);border-radius:12px;padding:.5rem;color:var(--wine)}
+.datebox b{display:block;font-family:var(--f-display);font-size:1.6rem;line-height:1.1}
+.datebox span{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase}
+.next-row p{color:var(--muted);font-size:.92rem}
+@media (max-width:620px){.next-row{grid-template-columns:auto 1fr}.next-row .btn{grid-column:1/-1;justify-content:center}}
+
+.tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin:4rem 0 1.6rem}
+.tabs button{font:500 .74rem/1 var(--f-body);letter-spacing:.16em;text-transform:uppercase;padding:.8em 1.2em;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.past{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.past article{display:grid;gap:.7rem;align-content:start;min-width:0}
+.past .thumb{aspect-ratio:4/5;border-radius:12px;overflow:hidden;background:var(--surface);border:1px solid var(--line)}
+.past .thumb img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s}
+.past article:hover .thumb img{transform:scale(1.04)}
+.past .meta{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.past h4{font-family:var(--f-display);font-weight:400;font-size:1.3rem;line-height:1.2;margin:0}
+.past p{font-size:.9rem;color:var(--muted)}
+@media (max-width:900px){.past{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.past{grid-template-columns:1fr}}
+
+.countdown{font-family:var(--f-script);color:var(--rose);font-size:1.9rem;line-height:1}
+.speakers{list-style:none;margin:0;padding:0;display:grid;gap:.55rem}
+.speakers li{display:grid;grid-template-columns:9.5rem 1fr;gap:.8rem;font-size:.9rem;align-items:baseline}
+.speakers b{font-family:var(--f-display);font-weight:500;font-size:1.02rem}
+.speakers span{color:var(--muted)}
+@media (max-width:480px){.speakers li{grid-template-columns:1fr;gap:0}}
+.qw-quote{margin:1.8rem 0 0;padding-left:1.2rem;border-left:1px solid var(--deep-gold);font-family:var(--f-display);font-style:italic;font-size:1.3rem;line-height:1.35}
+.qw-quote small{display:block;font:500 .7rem/1.4 var(--f-body);letter-spacing:.2em;text-transform:uppercase;opacity:.7;margin-top:.6rem;font-style:normal}
+.press{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(1.2rem,4vw,3rem);align-items:center;padding-block:2rem;border-bottom:1px solid var(--line)}
+.press > *{min-width:0}
+.press-thumb{padding:0;border:none;background:none;cursor:zoom-in;border-radius:14px;overflow:hidden}
+.press-thumb img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.press-body{display:grid;gap:.9rem}
+.press-body p{color:var(--muted)}
+@media (max-width:760px){.press{grid-template-columns:1fr}}
+#article{width:min(900px,calc(100vw - 32px))}
+
+/* Projects */
+.projects{background:var(--surface)}
+.p-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.p-card{background:var(--bg);border-radius:16px;overflow:hidden;border:1px solid var(--line);display:grid;grid-template-rows:auto 1fr;min-width:0}
+.p-card img{aspect-ratio:16/11;width:100%;object-fit:cover}
+.p-card .in{padding:1.5rem;display:grid;gap:.6rem;align-content:start}
+.p-card p{color:var(--muted);font-size:.93rem}
+.note{font-size:.75rem;color:var(--rose);font-style:italic}
+@media (max-width:900px){.p-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.p-grid{grid-template-columns:1fr}}
+
+/* Media */
+.media-list{display:grid;gap:0;border-top:1px solid var(--line)}
+.m-row{display:grid;grid-template-columns:8rem 1fr auto;gap:1.5rem;align-items:center;padding:1.5rem 0;border-bottom:1px solid var(--line)}
+.m-row > *{min-width:0}
+.m-row .when{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.m-row h4{font-family:var(--f-display);font-weight:400;font-size:1.4rem;margin:0 0 .2rem}
+.m-row p{color:var(--muted);font-size:.92rem}
+.m-row .kind{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:.4em .9em;white-space:nowrap}
+.m-row.placeholder{opacity:.75}
+@media (max-width:640px){.m-row{grid-template-columns:1fr}.m-row .kind{justify-self:start}}
+
+/* Connect */
+.connect-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem)}
+.connect-grid > *{min-width:0}
+.socials{display:grid;gap:.8rem;margin-top:2rem}
+.social{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.1rem 1.3rem;border:1px solid var(--line);border-radius:14px;text-decoration:none;transition:border-color .2s,background .2s}
+.social:hover{border-color:var(--wine);background:var(--surface)}
+.social b{font-family:var(--f-display);font-weight:500;font-size:1.15rem;display:block}
+.social span{font-size:.85rem;color:var(--muted)}
+.social .arr{font-size:1.3rem;color:var(--wine)}
+form.enq{display:grid;gap:1rem;background:var(--surface);padding:clamp(1.4rem,3vw,2.2rem);border-radius:18px}
+.field{display:grid;gap:.35rem}
+.field label{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.field input,.field select,.field textarea{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:.8em 1em;width:100%}
+.field textarea{min-height:110px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media (max-width:820px){.connect-grid{grid-template-columns:1fr}}
+@media (max-width:480px){.two{grid-template-columns:1fr}}
+.ok{font-size:.92rem;color:var(--wine);background:var(--bg);border-radius:10px;padding:.9em 1em;border:1px solid var(--line)}
+
+footer{background:var(--ink);color:var(--bg);padding-block:3rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.5rem;align-items:end}
+footer .big{font-family:var(--f-display);font-size:clamp(2rem,6vw,3.6rem);line-height:1}
+footer .big i{color:var(--rose)}
+footer small{opacity:.7;font-size:.8rem;max-width:44ch;display:block}
+
+/* Ticket dialog */
+dialog{border:none;padding:0;border-radius:20px;width:min(560px,calc(100vw - 32px));max-height:calc(100vh - 32px);background:var(--bg);color:var(--ink);box-shadow:0 30px 80px -20px rgba(0,0,0,.5)}
+dialog::backdrop{background:rgba(20,6,10,.6);backdrop-filter:blur(3px)}
+.dlg{padding:clamp(1.3rem,4vw,2.2rem);display:grid;gap:1.2rem}
+.dlg-head{display:flex;justify-content:space-between;gap:1rem;align-items:start}
+.dlg-head h3{font-size:1.7rem}
+.x{background:none;border:1px solid var(--line);border-radius:50%;width:2.2rem;height:2.2rem;cursor:pointer;color:var(--ink);font-size:1.1rem;flex:none}
+.tier{display:grid;grid-template-columns:1fr auto;gap:.3rem 1rem;align-items:center;padding:1rem;border:1px solid var(--line);border-radius:12px}
+.tier .nm{font-weight:500}
+.tier .pr{font-family:var(--f-display);font-size:1.2rem;font-variant-numeric:tabular-nums}
+.tier .ds{font-size:.82rem;color:var(--muted)}
+.stepper{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px}
+.stepper button{background:none;border:none;width:2.2rem;height:2.2rem;cursor:pointer;color:var(--ink);font-size:1.1rem}
+.stepper output{min-width:1.6rem;text-align:center;font-variant-numeric:tabular-nums}
+.total{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:1rem}
+.total b{font-family:var(--f-display);font-size:1.8rem;font-variant-numeric:tabular-nums}
+.demo-note{font-size:.78rem;color:var(--muted);background:var(--surface);border-radius:10px;padding:.7em .9em}
+.success{text-align:center;display:grid;gap:.8rem;justify-items:center;padding-block:1rem}
+.success .seal{width:5rem;height:5rem;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;font-size:2rem;color:var(--gold)}
+.success code{font-size:1rem;letter-spacing:.12em;background:var(--surface);padding:.4em .8em;border-radius:8px}
+</style>
+</head>
+<body>
+
+
+<div class="ribbon">Website concept · demo for presentation · placeholder details marked</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="mark" href="#top">Linda <i>Maphiri</i></a>
+    <ul>
+      <li><a href="#story">Her Story</a></li>
+      <li><a href="#ventures">Business</a></li>
+      <li><a href="#qw">Queening &amp; Winning</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#connect">Connect</a></li>
+    </ul>
+    <button class="btn" type="button" data-tickets="soiree">Get tickets</button>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="script">Welcome, Queen</span>
+        <h1>Linda <em>Maphiri</em></h1>
+        <div class="roles"><span>Ministry</span><span>Philanthropist</span><span>Businesswoman</span><span>Mother</span><span>Wife</span><span>Speaker</span></div>
+        <blockquote class="quote">“Life does not give you what you want, but what you command.”<small>Her guiding principle</small></blockquote>
+        <div class="ctas">
+          <a class="btn" href="#events">Upcoming events</a>
+          <a class="btn ghost" href="#connect">Book Linda to speak</a>
+        </div>
+      </div>
+      <figure class="arch" style="margin:0">
+        <div class="frame"><img src="img/hero.jpg" alt="Linda Maphiri speaking on stage with a microphone"></div>
+        <figcaption class="tag"><b>Hosting 7 November</b>Queening &amp; Winning Sunset Soirée</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span>Ministry</span><span>Philanthropist</span><span>Businesswoman</span><span>Mother</span><span>Wife</span><span>Speaker</span><span>Autism advocate</span>
+      <span>Ministry</span><span>Philanthropist</span><span>Businesswoman</span><span>Mother</span><span>Wife</span><span>Speaker</span><span>Autism advocate</span>
+    </div>
+  </div>
+
+  <!-- STORY -->
+  <section id="story">
+    <div class="wrap">
+      <div class="story-intro">
+        <img src="img/portrait-black.jpg" alt="Portrait of Linda Maphiri in a black embellished blazer">
+        <div class="copy">
+          <span class="eyebrow">Her story</span>
+          <h2>One woman. <em>Many crowns.</em></h2>
+          <p class="dropcap">Linda Maphiri is a businesswoman, a woman of faith and a mother who has made it her life’s work to help other women rise. She leads a growing group of businesses across plant hire, petroleum and retail, and she founded Queening and Winning, a soul clinic where women come to heal, grow and win together.</p>
+          <p>When she takes the stage, her message is simple and personal: believe in yourself, embrace your potential, and discover your true purpose. It is the same message she lives out at home, in her businesses and in the communities she serves.</p>
+          <p class="note">Draft biography for the demo. Final wording to be written with Linda.</p>
+        </div>
+      </div>
+
+      <div class="crowns">
+        <div class="crown"><span class="k">i.</span><h3>Ministry</h3><p>Faith is the foundation of everything Linda builds. She ministers to women through Queening and Winning, speaking to the soul as much as to ambition.</p></div>
+        <div class="crown"><span class="k">ii.</span><h3>Philanthropist</h3><p>From breast cancer awareness days to community outreach, Linda gives her time, platform and resources to causes that lift families.</p></div>
+        <div class="crown"><span class="k">iii.</span><h3>Businesswoman</h3><p>Director of Khudu Investment Holdings and franchisee of Shell and Sasol filling stations and a SPAR Express.</p></div>
+        <div class="crown"><span class="k">iv.</span><h3>Mother</h3><p>Her advocacy for children with autism, and for the parents who care for them, comes from the heart of a mother.</p></div>
+        <div class="crown"><span class="k">v.</span><h3>Wife</h3><p>A partnership built on faith and respect. Linda champions women while honouring the men who walk beside them.</p></div>
+        <div class="crown"><span class="k">vi.</span><h3>Speaker</h3><p>Keynote speaker at conferences and empowerment events, and a guest on SABC’s Thobela FM and Energy FM.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VENTURES -->
+  <section id="ventures" class="ventures">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Business</span><h2>Building <em>legacy</em> in business</h2></div>
+        <p class="lede">Linda’s portfolio keeps Limpopo moving: heavy equipment for construction, fuel on the road, and everyday essentials on the forecourt.</p>
+      </div>
+      <div class="v-grid">
+        <article class="v-card lead">
+          <span class="eyebrow">Flagship</span>
+          <h3>Khudu Investment Holdings</h3>
+          <span class="role">Linda Maphiri · Director</span>
+          <p>An investment holding company with specialist divisions in plant hire and petroleum, serving construction, mining and infrastructure projects.</p>
+          <div class="pills"><span class="pill">Plant Hire</span><span class="pill">Petroleum</span></div>
+        </article>
+        <article class="v-card">
+          <h3>Shell filling station</h3>
+          <span class="role">Franchisee · Maphiri Group</span>
+          <p>Fuel and convenience under one of the world’s best-known forecourt brands.</p>
+        </article>
+        <article class="v-card">
+          <h3>Sasol filling station</h3>
+          <span class="role">Franchisee · Maphiri Group</span>
+          <p>A proudly South African fuel partner, run with the same standard of service.</p>
+        </article>
+        <article class="v-card" style="grid-column:span 2">
+          <h3>SPAR Express</h3>
+          <span class="role">Owner</span>
+          <p>Quick, friendly convenience retail for the community.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUEENING & WINNING -->
+  <section id="qw" class="qw">
+    <div class="wrap">
+      <div class="qw-grid">
+        <div>
+          <span class="script">Calling all Queens</span>
+          <h2 style="margin-top:.6rem">Queening <em>&amp;</em> Winning</h2>
+          <p class="eyebrow" style="margin-top:1rem">Soul Clinic for Women · Founded by Linda Maphiri</p>
+          <p class="lede" style="margin-top:1.4rem">A sisterhood for women empowerment, now in its fourth year. Queening and Winning hosts retreats, conversations and gatherings where women recharge, exhale, and leave ready to lead their homes, careers and businesses.</p>
+          <blockquote class="qw-quote">“Queening and Winning is a soul-healing service, aimed at making women’s spirits victorious and resilient.”<small>Linda Maphiri, in the Polokwane Observer</small></blockquote>
+          <div class="pillars">
+            <div><b>Motivational talks</b><span>Inspiring talks to uplift and empower.</span></div>
+            <div><b>Deep conversations</b><span>Honest, meaningful dialogue between women.</span></div>
+            <div><b>Sip, Paint &amp; Pray</b><span>Creative sessions that bring emotional release and healing.</span></div>
+            <div><b>Community</b><span>Bonding with like-minded women and making new friends.</span></div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2.2rem">
+            <a class="btn gold" href="https://www.instagram.com/queening_and_winningqueens" target="_blank" rel="noopener">Follow on Instagram</a>
+            <a class="btn ghost-light" href="#events">See Queening events</a>
+          </div>
+        </div>
+        <figure class="qw-photo" style="margin:0">
+          <img src="img/moments.jpg" alt="Linda Maphiri with guests in front of the Queening and Winning backdrop">
+          <figcaption>Queening &amp; Winning 2025. Linda Maphiri, front right, in pink.</figcaption>
+        </figure>
+      </div>
+
+      <div class="autism">
+        <div class="inf" aria-hidden="true">∞</div>
+        <div>
+          <h3>Advocate for autism</h3>
+          <p class="lede">Linda speaks up for children with autism and disabilities, and for parents who face stigma while raising them. On SABC’s Thobela FM she addressed the victimisation of parents of children with autism and disabilities.</p>
+        </div>
+        <a class="btn ghost-light" href="#media">Listen to her story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section id="events">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Events</span><h2>Where you can <em>meet Linda</em></h2></div>
+        <p class="lede">Conferences, retreats and empowerment gatherings hosted by Queening and Winning or featuring Linda as a speaker. Book your seat online.</p>
+      </div>
+
+      <article class="featured">
+        <div class="poster"><img src="img/ev-soiree.jpg" alt="Poster for Queening and Winning Fourth Annual Edition, Sunset Soirée"></div>
+        <div class="body">
+          <span class="badge">Upcoming · Hosted by Linda</span>
+          <h3>Queening &amp; Winning: Sunset Soirée</h3>
+          <p class="countdown" id="countdown">Fourth annual edition</p>
+          <p class="lede" style="font-size:1rem">Queening and Winning returns for its 4th year. An afternoon of real talk, growth and sisterhood, with powerful conversations on property, purpose and relationships, set against a golden sunset backdrop.</p>
+          <dl class="facts" style="margin:0">
+            <div><dt>Date</dt><dd>Sat 7 Nov 2026</dd></div>
+            <div><dt>Time</dt><dd>11:00</dd></div>
+            <div><dt>Venue</dt><dd>Mekete Gardens</dd></div>
+          </dl>
+          <ul class="speakers">
+            <li><b>Tebogo Seleka</b><span>“From Zero to Six Properties” · Author, speaker, property investor</span></li>
+            <li><b>Pastor Mantsha</b><span>“Flourishing in the Season of Life” · Senior pastor, author of 8 books</span></li>
+            <li><b>Lesiba Maboea</b><span>“What Men Wish Women Knew” · The Marriage Mechanic, Shynebright Radio</span></li>
+            <li><b>Claud’s SA</b><span>Guest artist</span></li>
+            <li><b>Mmatema Mrs G</b><span>MC</span></li>
+          </ul>
+          <div class="speaker-row">
+            <img src="img/keynote.jpg" alt="">
+            <p><strong>Your host, Linda Maphiri,</strong> founder of Queening and Winning and businesswoman.</p>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:.8rem;align-items:center">
+            <button class="btn" type="button" data-tickets="soiree">Buy tickets · R750</button>
+            <span style="font-size:.85rem;color:var(--muted)">Per person</span>
+          </div>
+        </div>
+      </article>
+
+      <div class="tabs" role="group" aria-label="Filter past events">
+        <button type="button" aria-pressed="true" data-f="all">All past events</button>
+        <button type="button" aria-pressed="false" data-f="hosted">Hosted by Queening &amp; Winning</button>
+        <button type="button" aria-pressed="false" data-f="speaking">Speaking</button>
+        <button type="button" aria-pressed="false" data-f="media">Media</button>
+      </div>
+      <div class="past" id="past">
+        <article data-k="hosted"><div class="thumb"><img src="img/ev-qw2025.jpg" alt="Queening and Winning 2025 poster" ></div><span class="meta">8 Nov 2025 · Meropa Casino, Polokwane</span><h4>Queening &amp; Winning 2025: Vintage Elegant</h4><p>Speakers on financial planning, menopause and intimacy, and estate planning, with artist Clauds and MC Nonhlanhla Mulaudzi.</p></article>
+        <article data-k="speaking"><div class="thumb"><img src="img/ev-breast.jpg" alt="Breast Cancer Awareness Day poster" ></div><span class="meta">25 Oct 2025 · Polokwane Tennis Club</span><h4>3rd Annual Breast Cancer Awareness Day</h4><p>Featured alongside women leaders at Fixing Each Others’ Crown’s walk, run and free health checks.</p></article>
+        <article data-k="hosted"><div class="thumb"><img src="img/ev-picnic.jpg" alt="Queening and Winning Picnic Retreat poster" ></div><span class="meta">26 Oct 2024 · Olive Emporium, Polokwane</span><h4>Queening &amp; Winning Picnic Retreat</h4><p>“Calling all Queens!” Motivational talks, sip and paint, and community, in bright colours and hats.</p></article>
+        <article data-k="speaking"><div class="thumb"><img src="img/ev-arise.jpg" alt="Let It Go Arise and Shine poster" ></div><span class="meta">5 Oct 2024 · Giyani Premier Lodge</span><h4>Let It Go: Arise &amp; Shine, 2nd Edition</h4><p>A women’s empowerment evening, with Linda on the panel as business entrepreneur.</p></article>
+        <article data-k="media"><div class="thumb"><img src="img/ev-thobela.jpg" alt="Thobela FM interview poster" ></div><span class="meta">22 Apr 2026 · SABC Thobela FM</span><h4>Moeng on Sedibeng</h4><p>On the victimisation of parents of children with autism and disabilities.</p></article>
+        <article data-k="speaking"><div class="thumb"><img src="img/ev-wellness.jpg" alt="National Wo-Men’s Wellness Conference save the date" ></div><span class="meta">Aug 2026 · The Ranch Resort</span><h4>National Wo-Men’s Wellness Conference</h4><p>Keynote speaker, introduced as Shell and Sasol franchisee and founder of Queening and Winning.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Projects</span><h2>Impact <em>on the ground</em></h2></div>
+        <p class="lede">The work behind the stage: community outreach, health awareness and advocacy for families living with autism.</p>
+      </div>
+      <div class="p-grid">
+        <article class="p-card"><img src="img/community.jpg" alt="Linda with community members at an outreach table" ><div class="in"><span class="eyebrow">Community</span><h3>Community outreach</h3><p>Out in the community with local partners, listening and signing up families for support.</p><span class="note">Project name and details to confirm with Linda.</span></div></article>
+        <article class="p-card"><img src="img/ev-breast.jpg" alt=""  style="object-position:50% 30%"><div class="in"><span class="eyebrow">Health</span><h3>Breast cancer awareness</h3><p>Standing with survivors and families, encouraging free health checks and donating toiletries for patients.</p></div></article>
+        <article class="p-card"><img src="img/ev-thobela.jpg" alt=""  style="object-position:20% 20%"><div class="in"><span class="eyebrow">Advocacy</span><h3>Autism &amp; disability</h3><p>Using radio and public platforms to fight the stigma faced by parents of children with autism and disabilities.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEDIA -->
+  <section id="media">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Media &amp; press</span><h2>In the <em>spotlight</em></h2></div>
+        <p class="lede">Interviews, features and articles about Linda’s work.</p>
+      </div>
+      <div class="media-list">
+        <article class="press">
+          <button type="button" class="press-thumb" id="open-article" aria-label="Read the full article"><img src="img/sip-paint.jpg" alt="Guests at the Sip, Paint and Pray session"></button>
+          <div class="press-body">
+            <span class="eyebrow">Polokwane Observer · 14–20 Nov 2024</span>
+            <h3>Queening and Winning picnic brings women together</h3>
+            <p>Baatseba Nchabeleng reports on the second annual picnic retreat at Olive Lifestyle Emporium, where women came together for deep conversations on self-love, blended families and entrepreneurship. A highlight was the Sip, Paint and Pray session, facilitated by Nsuku Makwala, where many guests were moved to tears.</p>
+            <button class="btn ghost" type="button" id="open-article2" style="justify-self:start">Read the article</button>
+          </div>
+        </article>
+        <div class="m-row"><span class="when">22 Apr 2026</span><div><h4>Thobela FM · Moeng</h4><p>Sedibeng with Bradwin Monyamane &amp; Thomas Masha: victimisation of parents of children with autism and disabilities.</p></div><span class="kind">Radio</span></div>
+        <div class="m-row"><span class="when">14 Oct</span><div><h4>Energy FM 105.8 · Energy Drive</h4><p>With Thabo Sebashe &amp; Grace Mashiane: Linda as Queening and Winning founder.</p></div><span class="kind">Radio</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONNECT -->
+  <section id="connect" style="padding-top:0">
+    <div class="wrap connect-grid">
+      <div>
+        <span class="eyebrow">Connect</span>
+        <h2 style="margin-top:.6rem">Walk <em>with</em> Linda</h2>
+        <p class="lede" style="margin-top:1rem">Follow the journey, or invite Linda to speak at your conference, church, school or corporate event.</p>
+        <div class="socials">
+          <a class="social" href="https://www.instagram.com/linda_maphiri_" target="_blank" rel="noopener"><div><b>@linda_maphiri_</b><span>Instagram · personal</span></div><span class="arr">↗</span></a>
+          <a class="social" href="https://www.instagram.com/queening_and_winningqueens" target="_blank" rel="noopener"><div><b>@queening_and_winningqueens</b><span>Instagram · Queening &amp; Winning</span></div><span class="arr">↗</span></a>
+          <a class="social" href="https://www.linkedin.com/in/linda-maphiri-575856110" target="_blank" rel="noopener"><div><b>Linda Maphiri</b><span>LinkedIn</span></div><span class="arr">↗</span></a>
+        </div>
+      </div>
+      <form class="enq" id="enq" novalidate>
+        <h3>Booking enquiry</h3>
+        <div class="two">
+          <div class="field"><label for="e-name">Your name</label><input id="e-name" required placeholder="Full name"></div>
+          <div class="field"><label for="e-org">Organisation</label><input id="e-org" placeholder="Company or church"></div>
+        </div>
+        <div class="two">
+          <div class="field"><label for="e-email">Email</label><input id="e-email" type="email" required placeholder="you@example.com"></div>
+          <div class="field"><label for="e-type">Enquiry</label><select id="e-type"><option>Speaking engagement</option><option>Queening &amp; Winning partnership</option><option>Business enquiry</option><option>Media &amp; interviews</option></select></div>
+        </div>
+        <div class="field"><label for="e-msg">Message</label><textarea id="e-msg" placeholder="Tell us about your event, date and audience"></textarea></div>
+        <button class="btn" type="submit" style="justify-self:start">Send enquiry</button>
+        <p class="ok" id="enq-ok" hidden>Thank you. In the live site this enquiry would go to Linda’s team. This demo does not send messages.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="big">Linda <i>Maphiri</i></div>
+    <small>Ministry · Philanthropist · Businesswoman · Mother · Wife · Speaker. Website concept prepared for presentation. Ticket sales and forms are simulated.</small>
+  </div>
+</footer>
+
+<dialog id="article" aria-label="Polokwane Observer article">
+  <div class="dlg"><div class="dlg-head"><span class="eyebrow">Polokwane Observer · 14–20 Nov 2024 · page 11</span><button class="x" type="button" data-close aria-label="Close">×</button></div>
+  <img src="img/article.jpg" alt="Newspaper page with the article Queening and Winning picnic brings women together" style="border-radius:8px;width:100%"></div>
+</dialog>
+
+<!-- Ticket checkout (demo) -->
+<dialog id="tix" aria-labelledby="tix-title">
+  <div class="dlg" id="tix-form">
+    <div class="dlg-head">
+      <div><span class="eyebrow" id="tix-kicker">Tickets</span><h3 id="tix-title">Event</h3><p style="color:var(--muted);font-size:.9rem" id="tix-when"></p></div>
+      <button class="x" type="button" data-close aria-label="Close">×</button>
+    </div>
+    <div id="tiers" style="display:grid;gap:.7rem"></div>
+    <div class="two">
+      <div class="field"><label for="t-name">Name on ticket</label><input id="t-name" placeholder="Full name"></div>
+      <div class="field"><label for="t-email">Email</label><input id="t-email" type="email" placeholder="you@example.com"></div>
+    </div>
+    <div class="total"><span>Total</span><b id="tix-total">R0</b></div>
+    <p class="demo-note">Price taken from the event poster. In the live site this step would hand over to a secure payment provider (for example PayFast or Yoco). No payment is taken here.</p>
+    <button class="btn" type="button" id="tix-pay" style="justify-content:center">Continue to payment</button>
+  </div>
+  <div class="dlg success" id="tix-done" hidden>
+    <div class="seal">♛</div>
+    <h3>You’re on the list, Queen</h3>
+    <p style="color:var(--muted)" id="tix-summary"></p>
+    <code id="tix-ref"></code>
+    <p class="demo-note">Demo confirmation only. No payment was processed and no ticket was issued.</p>
+    <button class="btn ghost" type="button" data-close>Close</button>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  const EVENTS={
+    soiree:{kicker:"Queening & Winning · 4th annual edition",title:"Sunset Soirée",when:"Sat 7 Nov 2026 · 11:00 · Mekete Gardens",
+      tiers:[{n:"Soirée ticket",d:"Per person",p:750}]}
+  };
+  const dlg=document.getElementById('tix'),tiersEl=document.getElementById('tiers'),totalEl=document.getElementById('tix-total');
+  const form=document.getElementById('tix-form'),done=document.getElementById('tix-done');
+  let cur=null,qty=[];
+  const rand=n=>"R"+n.toLocaleString('en-ZA');
+  function render(){
+    tiersEl.innerHTML=cur.tiers.map((t,i)=>`<div class="tier"><span class="nm">${t.n}</span><span class="pr">${rand(t.p)}</span><span class="ds">${t.d}</span><span class="stepper"><button type="button" data-i="${i}" data-d="-1" aria-label="Fewer ${t.n}">−</button><output>${qty[i]}</output><button type="button" data-i="${i}" data-d="1" aria-label="More ${t.n}">+</button></span></div>`).join('');
+    const tot=cur.tiers.reduce((s,t,i)=>s+t.p*qty[i],0);
+    totalEl.textContent=rand(tot);
+    document.getElementById('tix-pay').disabled=tot===0;
+    document.getElementById('tix-pay').style.opacity=tot===0?.5:1;
+  }
+  tiersEl.addEventListener('click',e=>{const b=e.target.closest('button[data-i]');if(!b)return;const i=+b.dataset.i;qty[i]=Math.max(0,Math.min(10,qty[i]+(+b.dataset.d)));render();});
+  document.querySelectorAll('[data-tickets]').forEach(b=>b.addEventListener('click',()=>{
+    cur=EVENTS[b.dataset.tickets];qty=cur.tiers.map((_,i)=>i===0?1:0);
+    document.getElementById('tix-kicker').textContent=cur.kicker;
+    document.getElementById('tix-title').textContent=cur.title;
+    document.getElementById('tix-when').textContent=cur.when;
+    form.hidden=false;done.hidden=true;render();
+    if(dlg.showModal)dlg.showModal();else dlg.setAttribute('open','');
+  }));
+  document.getElementById('tix-pay').addEventListener('click',()=>{
+    const n=cur.tiers.reduce((s,t,i)=>s+qty[i],0);
+    const name=document.getElementById('t-name').value.trim();
+    document.getElementById('tix-summary').textContent=`${n} item${n>1?'s':''} for ${cur.title}${name?`, booked for ${name}`:''}.`;
+    document.getElementById('tix-ref').textContent="QW-"+Math.random().toString(36).slice(2,8).toUpperCase();
+    form.hidden=true;done.hidden=false;
+  });
+  dlg.addEventListener('click',e=>{if(e.target.closest('[data-close]')||e.target===dlg)dlg.close();});
+
+  // Countdown to the Sunset Soirée
+  const days=Math.ceil((new Date('2026-11-07T11:00:00+02:00')-new Date())/864e5);
+  const cd=document.getElementById('countdown');
+  if(days>1)cd.textContent=days+' days to go';else if(days===1)cd.textContent='Tomorrow';else if(days===0)cd.textContent='Today';
+
+  // Article viewer
+  const art=document.getElementById('article');
+  ['open-article','open-article2'].forEach(id=>document.getElementById(id).addEventListener('click',()=>art.showModal?art.showModal():art.setAttribute('open','')));
+  art.addEventListener('click',e=>{if(e.target.closest('[data-close]')||e.target===art)art.close();});
+
+  // Past events filter
+  const tabs=document.querySelectorAll('.tabs button');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.setAttribute('aria-pressed',String(x===t)));
+    document.querySelectorAll('#past article').forEach(a=>{a.hidden=!(t.dataset.f==='all'||a.dataset.k===t.dataset.f);});
+  }));
+
+  // Enquiry form (demo)
+  document.getElementById('enq').addEventListener('submit',e=>{e.preventDefault();document.getElementById('enq-ok').hidden=false;});
+})();
+</script>
+
+</body>
+</html>
