@@ -5,3 +5,7 @@ A personal brand website concept for Linda Maphiri: her story, businesses, Queen
 Open `index.html` in a browser, or view it on GitHub Pages once enabled (Settings → Pages → Deploy from branch → `main` / root).
 
 Ticket checkout and the enquiry form are simulated: no payments are taken and no messages are sent.
+
+## Copyright
+
+This website is a demo concept designed and developed by TGW-Group for presentation purposes only. Design and code © 2026 TGW-Group. All rights reserved. No part of this demo may be copied, reproduced or used without written permission from TGW-Group. Photos and event posters remain the property of their respective owners.
