@@ -816,6 +816,12 @@ html{scroll-padding-top:6.5rem}
 </dialog>
 
 <script>
+// Always open on the top banner, not a remembered scroll position or section link
+try{if('scrollRestoration' in history)history.scrollRestoration='manual';}catch(e){}
+(function(){
+  const toTop=()=>{if(location.hash){try{history.replaceState(null,'',location.pathname+location.search);}catch(e){}}window.scrollTo(0,0);};
+  toTop();window.addEventListener('load',toTop);window.addEventListener('pageshow',e=>{if(e.persisted)window.scrollTo(0,0);});
+})();
 (function(){
   const EVENTS={
     soiree:{kicker:"Queening & Winning · 4th annual edition",title:"Sunset Soirée",when:"Sat 7 Nov 2026 · 11:00 · Mekete Gardens",
