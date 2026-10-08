@@ -175,6 +175,19 @@ section{padding-block:clamp(4rem,9vw,7rem)}
 @media (max-width:820px){.sp-grid{grid-template-columns:1fr 1fr}}
 .qw .autism{margin-top:2.5rem}
 
+.autism-photos{display:grid;grid-template-columns:2fr 1fr;gap:1rem;margin-top:2rem;position:relative}
+.autism-photos figure{margin:0;min-width:0}
+.autism-photos img{width:100%;height:100%;max-height:340px;object-fit:cover;border-radius:12px}
+.autism-photos figcaption{font-size:.78rem;opacity:.7;margin-top:.5rem}
+@media (max-width:620px){.autism-photos{grid-template-columns:1fr}.autism-photos figure:last-child{display:none}}
+.recognition{display:grid;grid-template-columns:.7fr .7fr 1.2fr;gap:1.2rem;margin-top:1.6rem;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:1.2rem;align-items:center}
+.recognition > *{min-width:0}
+.recognition img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px}
+.recognition .txt{display:grid;gap:.8rem;padding:.6rem}
+.recognition blockquote{margin:0;font-family:var(--f-display);font-style:italic;font-size:1.25rem;line-height:1.4}
+.recognition p{color:var(--muted);font-size:.9rem}
+@media (max-width:820px){.recognition{grid-template-columns:1fr 1fr}.recognition .txt{grid-column:1/-1}}
+
 /* Events */
 .featured{display:grid;grid-template-columns:.8fr 1.2fr;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--bg)}
 .featured > *{min-width:0}
@@ -210,7 +223,8 @@ section{padding-block:clamp(4rem,9vw,7rem)}
 .tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin:4rem 0 1.6rem}
 .tabs button{font:500 .74rem/1 var(--f-body);letter-spacing:.16em;text-transform:uppercase;padding:.8em 1.2em;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer}
 .tabs button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.past{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.past{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6rem}
+@media (max-width:1100px){.past{grid-template-columns:repeat(3,1fr)}}
 .past article{display:grid;gap:.7rem;align-content:start;min-width:0}
 .past .thumb{aspect-ratio:4/5;border-radius:12px;overflow:hidden;background:var(--surface);border:1px solid var(--line)}
 .past .thumb img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s}
@@ -458,7 +472,7 @@ html{scroll-padding-top:6.5rem}
       </div>
 
       <div class="crowns">
-        <div class="crown"><span class="k">i.</span><h3>Ministry</h3><p>A born-again Christian, Linda finds joy in her church community and in supporting her pastors. She is currently pursuing a three-year course at Bible College.</p></div>
+        <div class="crown"><span class="k">i.</span><h3>Ministry</h3><p>A born-again Christian, Linda finds joy in her church community and in supporting her pastors. She ministers at women’s gatherings as Minister Linda Maphiri and is currently pursuing a three-year course at Bible College.</p></div>
         <div class="crown"><span class="k">ii.</span><h3>Philanthropist</h3><p>From breast cancer awareness days to community outreach, Linda gives her time, platform and resources to causes that lift families.</p></div>
         <div class="crown"><span class="k">iii.</span><h3>Businesswoman</h3><p>Director of Khudu Investment Holdings, with Sasol stations, a SPAR Express Shell garage, Combat Security and the Ican Park complex in her portfolio.</p></div>
         <div class="crown"><span class="k">iv.</span><h3>Mother</h3><p>A devoted mother to two wonderful boys. Her advocacy for children with autism, and for the parents who care for them, comes from the heart of a mother.</p></div>
@@ -554,6 +568,10 @@ html{scroll-padding-top:6.5rem}
         </div>
         <a class="btn ghost-light" href="#media">Listen to her story</a>
       </div>
+      <div class="autism-photos">
+        <figure><img src="img/autism-hike.jpg" alt="Hikers with Queening and Winning autism awareness flags"><figcaption>Queening &amp; Winning autism awareness hike</figcaption></figure>
+        <figure><img src="img/autism-flag.jpg" alt="A hiker holding the Queening and Winning Autism Awareness flag"><figcaption>Accept · Love · Understand</figcaption></figure>
+      </div>
     </div>
   </section>
 
@@ -599,15 +617,18 @@ html{scroll-padding-top:6.5rem}
         <button type="button" aria-pressed="true" data-f="all">All past events</button>
         <button type="button" aria-pressed="false" data-f="hosted">Hosted by Queening &amp; Winning</button>
         <button type="button" aria-pressed="false" data-f="speaking">Speaking</button>
+        <button type="button" aria-pressed="false" data-f="ministry">Ministry</button>
         <button type="button" aria-pressed="false" data-f="media">Media</button>
       </div>
       <div class="past" id="past">
+        <article data-k="speaking"><div class="thumb"><img src="img/ev-wellness.jpg" alt="National Wo-Men’s Wellness Conference save the date" ></div><span class="meta">Aug 2026 · The Ranch Resort</span><h4>National Wo-Men’s Wellness Conference</h4><p>Keynote speaker, introduced as Shell and Sasol franchisee and founder of Queening and Winning.</p></article>
+        <article data-k="media"><div class="thumb"><img src="img/ev-thobela.jpg" alt="Thobela FM interview poster" ></div><span class="meta">22 Apr 2026 · SABC Thobela FM</span><h4>Moeng on Sedibeng</h4><p>On the victimisation of parents of children with autism and disabilities.</p></article>
         <article data-k="hosted"><div class="thumb"><img src="img/ev-qw2025.jpg" alt="Queening and Winning 2025 poster" ></div><span class="meta">8 Nov 2025 · Meropa Casino, Polokwane</span><h4>Queening &amp; Winning 2025: Vintage Elegant</h4><p>Speakers on financial planning, menopause and intimacy, and estate planning, with artist Clauds and MC Nonhlanhla Mulaudzi.</p></article>
-        <article data-k="speaking"><div class="thumb"><img src="img/ev-breast.jpg" alt="Breast Cancer Awareness Day poster" ></div><span class="meta">25 Oct 2025 · Polokwane Tennis Club</span><h4>3rd Annual Breast Cancer Awareness Day</h4><p>Featured alongside women leaders at Fixing Each Others’ Crown’s walk, run and free health checks.</p></article>
+        <article data-k="speaking"><div class="thumb"><img src="img/ev-breast.jpg" alt="Breast Cancer Awareness Day poster" ></div><span class="meta">25 Oct 2025 · Polokwane Tennis Club</span><h4>3rd Annual Breast Cancer Awareness Day</h4><p>Guest speaker with the talk “Becoming Your Own Healing: The Sacred Power of Self-Love”, recognised with a certificate of appreciation.</p></article>
         <article data-k="hosted"><div class="thumb"><img src="img/ev-picnic.jpg" alt="Queening and Winning Picnic Retreat poster" ></div><span class="meta">26 Oct 2024 · Olive Emporium, Polokwane</span><h4>Queening &amp; Winning Picnic Retreat</h4><p>“Calling all Queens!” Motivational talks, sip and paint, and community, in bright colours and hats.</p></article>
         <article data-k="speaking"><div class="thumb"><img src="img/ev-arise.jpg" alt="Let It Go Arise and Shine poster" ></div><span class="meta">5 Oct 2024 · Giyani Premier Lodge</span><h4>Let It Go: Arise &amp; Shine, 2nd Edition</h4><p>A women’s empowerment evening, with Linda on the panel as business entrepreneur.</p></article>
-        <article data-k="media"><div class="thumb"><img src="img/ev-thobela.jpg" alt="Thobela FM interview poster" ></div><span class="meta">22 Apr 2026 · SABC Thobela FM</span><h4>Moeng on Sedibeng</h4><p>On the victimisation of parents of children with autism and disabilities.</p></article>
-        <article data-k="speaking"><div class="thumb"><img src="img/ev-wellness.jpg" alt="National Wo-Men’s Wellness Conference save the date" ></div><span class="meta">Aug 2026 · The Ranch Resort</span><h4>National Wo-Men’s Wellness Conference</h4><p>Keynote speaker, introduced as Shell and Sasol franchisee and founder of Queening and Winning.</p></article>
+        <article data-k="media"><div class="thumb"><img src="img/ev-prudent.jpg" alt="Prudent Woman radio interview poster" style="object-position:22% 50%"></div><span class="meta">10 Sep 2023 · Bold Moves Radio</span><h4>Prudent Woman with Rhulani Baloyi</h4><p>A conversation with Linda as a sociopreneur, live on Bold Moves Radio’s Facebook page and YouTube.</p></article>
+        <article data-k="ministry"><div class="thumb"><img src="img/ev-foundations.jpg" alt="Re-Establishing Foundations poster"></div><span class="meta">26 Nov 2022 · Vahlavi Lodge, Giyani</span><h4>Re-Establishing Foundations</h4><p>Ministering as Minister Linda Maphiri at Heal &amp; Support A Sister’s gathering, on Jeremiah 1:10.</p></article>
       </div>
     </div>
   </section>
@@ -621,9 +642,19 @@ html{scroll-padding-top:6.5rem}
       </div>
       <div class="p-grid">
         <article class="p-card"><img src="img/community.jpg" alt="Linda with community members at an outreach table" ><div class="in"><span class="eyebrow">Community</span><h3>Community outreach</h3><p>Out in the community with local partners, listening and signing up families for support.</p><span class="note">Project name and details to confirm with Linda.</span></div></article>
-        <article class="p-card"><img src="img/ev-breast.jpg" alt=""  style="object-position:50% 30%"><div class="in"><span class="eyebrow">Health</span><h3>Breast cancer awareness</h3><p>Standing with survivors and families, encouraging free health checks and donating toiletries for patients.</p></div></article>
-        <article class="p-card"><img src="img/ev-thobela.jpg" alt=""  style="object-position:20% 20%"><div class="in"><span class="eyebrow">Advocacy</span><h3>Autism &amp; disability</h3><p>Using radio and public platforms to fight the stigma faced by parents of children with autism and disabilities.</p></div></article>
+        <article class="p-card"><img src="img/cancer-award.jpg" alt="Certificate presentation at the Breast Cancer Awareness event" style="object-position:50% 25%"><div class="in"><span class="eyebrow">Health</span><h3>Breast cancer awareness</h3><p>Standing with survivors and families, encouraging free health checks and donating toiletries for patients.</p></div></article>
+        <article class="p-card"><img src="img/autism-hike.jpg" alt="Queening and Winning autism awareness hike group"><div class="in"><span class="eyebrow">Advocacy</span><h3>Autism awareness</h3><p>Autism awareness hikes with Queening and Winning, and radio conversations that fight the stigma faced by parents of children with autism and disabilities.</p></div></article>
       </div>
+      <article class="recognition">
+        <img src="img/cert.jpg" alt="Certificate of appreciation presented to Queen Linda by Fixing Each Others’ Crown">
+        <img src="img/cancer-award.jpg" alt="Certificate presentation on stage at the cancer awareness event" style="object-position:50% 25%">
+        <div class="txt">
+          <span class="eyebrow">Recognition · Fixing Each Others’ Crown</span>
+          <h3>Certificate of appreciation</h3>
+          <p>Presented to Queen Linda for her contribution as guest speaker at the 3rd Annual Cancer Awareness Event, with her talk “Becoming Your Own Healing: The Sacred Power of Self-Love”.</p>
+          <blockquote>“Your words touched hearts, inspired hope, and encouraged many to embrace self-love as a path to true healing and wholeness.”</blockquote>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -645,7 +676,8 @@ html{scroll-padding-top:6.5rem}
           </div>
         </article>
         <div class="m-row"><span class="when">22 Apr 2026</span><div><h4>Thobela FM · Moeng</h4><p>Sedibeng with Bradwin Monyamane &amp; Thomas Masha: victimisation of parents of children with autism and disabilities.</p></div><span class="kind">Radio</span></div>
-        <div class="m-row"><span class="when">14 Oct</span><div><h4>Energy FM 105.8 · Energy Drive</h4><p>With Thabo Sebashe &amp; Grace Mashiane: Linda as Queening and Winning founder.</p></div><span class="kind">Radio</span></div>
+        <div class="m-row"><span class="when">14 Oct 2025</span><div><h4>Energy FM 105.8 · Energy Drive</h4><p>With Thabo Sebashe &amp; Grace Mashiane: Linda as Queening and Winning founder.</p></div><span class="kind">Radio</span></div>
+        <div class="m-row"><span class="when">10 Sep 2023</span><div><h4>Bold Moves Radio · Prudent Woman</h4><p>Host Rhulani Baloyi in conversation with Linda as a sociopreneur.</p></div><span class="kind">Radio</span></div>
       </div>
     </div>
   </section>
