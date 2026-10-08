@@ -223,8 +223,7 @@ section{padding-block:clamp(4rem,9vw,7rem)}
 .tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin:4rem 0 1.6rem}
 .tabs button{font:500 .74rem/1 var(--f-body);letter-spacing:.16em;text-transform:uppercase;padding:.8em 1.2em;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer}
 .tabs button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.past{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6rem}
-@media (max-width:1100px){.past{grid-template-columns:repeat(3,1fr)}}
+.past{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
 .past article{display:grid;gap:.7rem;align-content:start;min-width:0}
 .past .thumb{aspect-ratio:4/5;border-radius:12px;overflow:hidden;background:var(--surface);border:1px solid var(--line)}
 .past .thumb img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s}
@@ -265,14 +264,15 @@ section{padding-block:clamp(4rem,9vw,7rem)}
 
 /* Media */
 .media-list{display:grid;gap:0;border-top:1px solid var(--line)}
-.m-row{display:grid;grid-template-columns:8rem 1fr auto;gap:1.5rem;align-items:center;padding:1.5rem 0;border-bottom:1px solid var(--line)}
+.m-row{display:grid;grid-template-columns:5.5rem 8rem 1fr auto;gap:1.5rem;align-items:center;padding:1.5rem 0;border-bottom:1px solid var(--line)}
 .m-row > *{min-width:0}
+.m-thumb{width:5.5rem;aspect-ratio:1;object-fit:cover;object-position:50% 20%;border-radius:10px;border:1px solid var(--line)}
 .m-row .when{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
 .m-row h4{font-family:var(--f-display);font-weight:400;font-size:1.4rem;margin:0 0 .2rem}
 .m-row p{color:var(--muted);font-size:.92rem}
 .m-row .kind{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:.4em .9em;white-space:nowrap}
 .m-row.placeholder{opacity:.75}
-@media (max-width:640px){.m-row{grid-template-columns:1fr}.m-row .kind{justify-self:start}}
+@media (max-width:640px){.m-row{grid-template-columns:4.5rem 1fr;column-gap:1rem;row-gap:.3rem;align-items:start}.m-thumb{grid-row:span 3;width:4.5rem}.m-row > *:not(.m-thumb){grid-column:2}.m-row .kind{justify-self:start}}
 
 /* Contacts */
 .contacts{background:var(--surface)}
@@ -625,6 +625,7 @@ html{scroll-padding-top:6.5rem}
       <div class="past" id="past">
         <article data-k="speaking"><div class="thumb"><img src="img/ev-wellness.jpg" alt="National Wo-Men’s Wellness Conference save the date" ></div><span class="meta">Aug 2026 · The Ranch Resort</span><h4>National Wo-Men’s Wellness Conference</h4><p>Keynote speaker, introduced as Shell and Sasol franchisee and founder of Queening and Winning.</p></article>
         <article data-k="media"><div class="thumb"><img src="img/ev-thobela.jpg" alt="Thobela FM interview poster" ></div><span class="meta">22 Apr 2026 · SABC Thobela FM</span><h4>Moeng on Sedibeng</h4><p>On the victimisation of parents of children with autism and disabilities.</p></article>
+        <article data-k="media"><div class="thumb"><img src="img/ev-energy.jpg" alt="Energy FM radio interview poster"></div><span class="meta">Tue 14 Oct 2025 · Energy FM 105.8</span><h4>Energy Drive radio interview</h4><p>With Thabo Sebashe and Grace Mashiane, as founder of Queening and Winning.</p></article>
         <article data-k="hosted"><div class="thumb"><img src="img/ev-qw2025.jpg" alt="Queening and Winning 2025 poster" ></div><span class="meta">8 Nov 2025 · Meropa Casino, Polokwane</span><h4>Queening &amp; Winning 2025: Vintage Elegant</h4><p>Speakers on financial planning, menopause and intimacy, and estate planning, with artist Clauds and MC Nonhlanhla Mulaudzi.</p></article>
         <article data-k="speaking"><div class="thumb"><img src="img/ev-breast.jpg" alt="Breast Cancer Awareness Day poster" ></div><span class="meta">25 Oct 2025 · Polokwane Tennis Club</span><h4>3rd Annual Breast Cancer Awareness Day</h4><p>Guest speaker with the talk “Becoming Your Own Healing: The Sacred Power of Self-Love”, recognised with a certificate of appreciation.</p></article>
         <article data-k="hosted"><div class="thumb"><img src="img/ev-picnic.jpg" alt="Queening and Winning Picnic Retreat poster" ></div><span class="meta">26 Oct 2024 · Olive Emporium, Polokwane</span><h4>Queening &amp; Winning Picnic Retreat</h4><p>“Calling all Queens!” Motivational talks, sip and paint, and community, in bright colours and hats.</p></article>
@@ -677,9 +678,9 @@ html{scroll-padding-top:6.5rem}
             <button class="btn ghost" type="button" id="open-article2" style="justify-self:start">Read the article</button>
           </div>
         </article>
-        <div class="m-row"><span class="when">22 Apr 2026</span><div><h4>Thobela FM · Moeng</h4><p>Sedibeng with Bradwin Monyamane &amp; Thomas Masha: victimisation of parents of children with autism and disabilities.</p></div><span class="kind">Radio</span></div>
-        <div class="m-row"><span class="when">14 Oct 2025</span><div><h4>Energy FM 105.8 · Energy Drive</h4><p>With Thabo Sebashe &amp; Grace Mashiane: Linda as Queening and Winning founder.</p></div><span class="kind">Radio</span></div>
-        <div class="m-row"><span class="when">10 Sep 2023</span><div><h4>Bold Moves Radio · Prudent Woman</h4><p>Host Rhulani Baloyi in conversation with Linda as a sociopreneur.</p></div><span class="kind">Radio</span></div>
+        <div class="m-row"><img class="m-thumb" src="img/ev-thobela.jpg" alt=""><span class="when">22 Apr 2026</span><div><h4>Thobela FM · Moeng</h4><p>Sedibeng with Bradwin Monyamane &amp; Thomas Masha: victimisation of parents of children with autism and disabilities.</p></div><span class="kind">Radio</span></div>
+        <div class="m-row"><img class="m-thumb" src="img/ev-energy.jpg" alt=""><span class="when">14 Oct 2025</span><div><h4>Energy FM 105.8 · Energy Drive</h4><p>With Thabo Sebashe &amp; Grace Mashiane: Linda as Queening and Winning founder.</p></div><span class="kind">Radio</span></div>
+        <div class="m-row"><img class="m-thumb" src="img/ev-prudent.jpg" alt=""><span class="when">10 Sep 2023</span><div><h4>Bold Moves Radio · Prudent Woman</h4><p>Host Rhulani Baloyi in conversation with Linda as a sociopreneur.</p></div><span class="kind">Radio</span></div>
       </div>
     </div>
   </section>
