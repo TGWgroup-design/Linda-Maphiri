@@ -105,9 +105,13 @@ section{padding-block:clamp(4rem,9vw,7rem)}
 /* Story / crowns */
 .story-intro{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,5vw,5rem);align-items:start;margin-bottom:4rem}
 .story-intro > *{min-width:0}
-.story-intro img{border-radius:14px;aspect-ratio:3/4;object-fit:cover;width:100%;object-position:50% 15%}
+.story-intro img{border-radius:14px;aspect-ratio:3/4;object-fit:cover;width:100%;object-position:50% 20%}
 .story-intro .copy{display:grid;gap:1.2rem;align-content:start}
 .story-intro .copy p{max-width:60ch}
+.bio-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem 1.5rem;margin:.6rem 0 0;padding-top:1.2rem;border-top:1px solid var(--line)}
+.bio-facts div{min-width:0}
+.bio-facts dt{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.bio-facts dd{margin:0;font-family:var(--f-display);font-size:1.1rem;line-height:1.3}
 .dropcap::first-letter{font-family:var(--f-display);float:left;font-size:4.4rem;line-height:.8;padding:.35rem .6rem 0 0;color:var(--wine)}
 @media (max-width:820px){.story-intro{grid-template-columns:1fr}.story-intro img{max-width:380px}}
 .crowns{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
@@ -349,7 +353,7 @@ html{scroll-padding-top:6.5rem}
   .hero .quote{font-size:1.2rem}
   .marquee{padding-block:.7rem}
   .story-intro{gap:1.6rem;margin-bottom:2.5rem}
-  .story-intro img{aspect-ratio:1/1;max-width:100%;object-position:50% 12%}
+  .story-intro img{aspect-ratio:4/5;max-width:100%;object-position:50% 20%}
   .crown{padding:1.3rem 1.2rem 1.4rem;gap:.4rem}
   .crown h3{font-size:1.35rem}
   .v-card{padding:1.4rem}
@@ -412,7 +416,7 @@ html{scroll-padding-top:6.5rem}
         <span class="script">Welcome, Queen</span>
         <h1>Linda <em>Maphiri</em></h1>
         <div class="roles"><span>Ministry</span><span>Philanthropist</span><span>Businesswoman</span><span>Mother</span><span>Wife</span><span>Speaker</span></div>
-        <blockquote class="quote">“Life does not give you what you want, but what you command.”<small>Her guiding principle</small></blockquote>
+        <blockquote class="quote">“Life doesn’t give you what you deserve, but what you demand.”<small>Her guiding principle and daily mantra</small></blockquote>
         <div class="ctas">
           <a class="btn" href="#events">Upcoming events</a>
           <a class="btn ghost" href="#connect">Book Linda to speak</a>
@@ -436,22 +440,29 @@ html{scroll-padding-top:6.5rem}
   <section id="story">
     <div class="wrap">
       <div class="story-intro">
-        <img src="img/portrait-black.jpg" alt="Portrait of Linda Maphiri in a black embellished blazer">
+        <img src="img/portrait-profile.jpg" alt="Portrait of Linda Maphiri smiling in a crystal-embellished gown">
         <div class="copy">
           <span class="eyebrow">Her story</span>
           <h2>One woman. <em>Many crowns.</em></h2>
-          <p class="dropcap">Linda Maphiri is a businesswoman, a woman of faith and a mother who has made it her life’s work to help other women rise. She leads a growing group of businesses across plant hire, petroleum and retail, and she founded Queening and Winning, a soul clinic where women come to heal, grow and win together.</p>
-          <p>When she takes the stage, her message is simple and personal: believe in yourself, embrace your potential, and discover your true purpose. It is the same message she lives out at home, in her businesses and in the communities she serves.</p>
-          <p class="note">Draft biography for the demo. Final wording to be written with Linda.</p>
+          <p class="dropcap">Linda Maphiri is a proud Giyani native with a vibrant family life. She is one of four sisters who have been blessed with two nurturing parents who continue to support their passions. She married the love of her life in 2009 and is a devoted mother to two wonderful boys.</p>
+          <p>From a young age, Linda felt a deep calling to serve and uplift others. In 2023 she founded Queening and Winning, a soul clinic for women that is dedicated to nurturing emotional resilience and victory.</p>
+          <p>She holds degrees in Business Management and Animal Production, and certifications in Health and Safety and Data Capturing. Her career has spanned various fields, and she is now immersed in business ventures with her husband.</p>
+          <p>Linda aspires to own multiple properties worldwide, delve into event planning, and establish a series of international clothing boutiques that reflect her love for fashion and opulence.</p>
+          <dl class="bio-facts">
+            <div><dt>Home</dt><dd>Giyani, Limpopo</dd></div>
+            <div><dt>Family</dt><dd>Married 2009 · two boys</dd></div>
+            <div><dt>Founded</dt><dd>Queening &amp; Winning, 2023</dd></div>
+            <div><dt>Loves</dt><dd>Travelling, exercise, reading</dd></div>
+          </dl>
         </div>
       </div>
 
       <div class="crowns">
-        <div class="crown"><span class="k">i.</span><h3>Ministry</h3><p>Faith is the foundation of everything Linda builds. She ministers to women through Queening and Winning, speaking to the soul as much as to ambition.</p></div>
+        <div class="crown"><span class="k">i.</span><h3>Ministry</h3><p>A born-again Christian, Linda finds joy in her church community and in supporting her pastors. She is currently pursuing a three-year course at Bible College.</p></div>
         <div class="crown"><span class="k">ii.</span><h3>Philanthropist</h3><p>From breast cancer awareness days to community outreach, Linda gives her time, platform and resources to causes that lift families.</p></div>
         <div class="crown"><span class="k">iii.</span><h3>Businesswoman</h3><p>Director of Khudu Investment Holdings, with Sasol stations, a SPAR Express Shell garage, Combat Security and the Ican Park complex in her portfolio.</p></div>
-        <div class="crown"><span class="k">iv.</span><h3>Mother</h3><p>Her advocacy for children with autism, and for the parents who care for them, comes from the heart of a mother.</p></div>
-        <div class="crown"><span class="k">v.</span><h3>Wife</h3><p>A partnership built on faith and respect. Linda champions women while honouring the men who walk beside them.</p></div>
+        <div class="crown"><span class="k">iv.</span><h3>Mother</h3><p>A devoted mother to two wonderful boys. Her advocacy for children with autism, and for the parents who care for them, comes from the heart of a mother.</p></div>
+        <div class="crown"><span class="k">v.</span><h3>Wife</h3><p>Married to the love of her life since 2009, Linda builds her business ventures side by side with her husband.</p></div>
         <div class="crown"><span class="k">vi.</span><h3>Speaker</h3><p>Keynote speaker at conferences and empowerment events, and a guest on SABC’s Thobela FM and Energy FM.</p></div>
       </div>
     </div>
@@ -505,7 +516,7 @@ html{scroll-padding-top:6.5rem}
         <div>
           <span class="script">Calling all Queens</span>
           <h2 style="margin-top:.6rem">Queening <em>&amp;</em> Winning</h2>
-          <p class="eyebrow" style="margin-top:1rem">Soul Clinic for Women · Founded by Linda Maphiri</p>
+          <p class="eyebrow" style="margin-top:1rem">Soul Clinic for Women · Founded by Linda Maphiri in 2023</p>
           <p class="lede" style="margin-top:1.4rem">A sisterhood for women empowerment, now in its fourth year. Queening and Winning hosts retreats, conversations and gatherings where women recharge, exhale, and leave ready to lead their homes, careers and businesses.</p>
           <blockquote class="qw-quote">“Queening and Winning is a soul-healing service, aimed at making women’s spirits victorious and resilient.”<small>Linda Maphiri, in the Polokwane Observer</small></blockquote>
           <div class="pillars">
