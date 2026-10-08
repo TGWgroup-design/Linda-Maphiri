@@ -709,7 +709,7 @@ html{scroll-padding-top:6.5rem}
           <h3>Combat Security</h3>
           <p>Unit 1, Lezmin Building, 8 Pierre Street, Bendor Park, Polokwane, 0699</p>
           <div class="c-line"><a href="tel:+27158802399">015 880 2399</a><button type="button" class="copy-btn" data-copy="015 880 2399">Copy</button></div>
-          <div class="c-line"><span>admin@combatsecurity.co.za</span><button type="button" class="copy-btn" data-copy="admin@combatsecurity.co.za">Copy</button></div>
+          <div class="c-line"><a href="mailto:admin@combatsecurity.co.za">admin@combatsecurity.co.za</a><button type="button" class="copy-btn" data-copy="admin@combatsecurity.co.za">Copy</button></div>
         </article>
         <article class="c-card wide">
           <span class="eyebrow">Sasol Stations</span>
@@ -737,7 +737,7 @@ html{scroll-padding-top:6.5rem}
         <article class="c-card">
           <span class="eyebrow">Khudu Investment Holdings</span>
           <h3>Email</h3>
-          <div class="c-line"><span>Maphirilh@gmail.com</span><button type="button" class="copy-btn" data-copy="Maphirilh@gmail.com">Copy</button></div>
+          <div class="c-line"><a href="mailto:Maphirilh@gmail.com">Maphirilh@gmail.com</a><button type="button" class="copy-btn" data-copy="Maphirilh@gmail.com">Copy</button></div>
         </article>
       </div>
     </div>
@@ -790,31 +790,7 @@ html{scroll-padding-top:6.5rem}
   <img src="img/article.jpg" alt="Newspaper page with the article Queening and Winning picnic brings women together" style="border-radius:8px;width:100%"></div>
 </dialog>
 
-<!-- Ticket checkout (demo) -->
-<dialog id="tix" aria-labelledby="tix-title">
-  <div class="dlg" id="tix-form">
-    <div class="dlg-head">
-      <div><span class="eyebrow" id="tix-kicker">Tickets</span><h3 id="tix-title">Event</h3><p style="color:var(--muted);font-size:.9rem" id="tix-when"></p></div>
-      <button class="x" type="button" data-close aria-label="Close">×</button>
-    </div>
-    <div id="tiers" style="display:grid;gap:.7rem"></div>
-    <div class="two">
-      <div class="field"><label for="t-name">Name on ticket</label><input id="t-name" placeholder="Full name"></div>
-      <div class="field"><label for="t-email">Email</label><input id="t-email" type="email" placeholder="you@example.com"></div>
-    </div>
-    <div class="total"><span>Total</span><b id="tix-total">R0</b></div>
-    <p class="demo-note">Price taken from the event poster. In the live site this step would hand over to a secure payment provider (for example PayFast or Yoco). No payment is taken here.</p>
-    <button class="btn" type="button" id="tix-pay" style="justify-content:center">Continue to payment</button>
-  </div>
-  <div class="dlg success" id="tix-done" hidden>
-    <div class="seal">♛</div>
-    <h3>You’re on the list, Queen</h3>
-    <p style="color:var(--muted)" id="tix-summary"></p>
-    <code id="tix-ref"></code>
-    <p class="demo-note">Demo confirmation only. No payment was processed and no ticket was issued.</p>
-    <button class="btn ghost" type="button" data-close>Close</button>
-  </div>
-</dialog>
+
 
 <script>
 // Always open on the top banner, not a remembered scroll position or section link
@@ -824,39 +800,6 @@ try{if('scrollRestoration' in history)history.scrollRestoration='manual';}catch(
   toTop();window.addEventListener('load',toTop);window.addEventListener('pageshow',e=>{if(e.persisted)window.scrollTo(0,0);});
 })();
 (function(){
-  const EVENTS={
-    soiree:{kicker:"Queening & Winning · 4th annual edition",title:"Sunset Soirée",when:"Sat 7 Nov 2026 · 11:00 · Mekete Gardens",
-      tiers:[{n:"Soirée ticket",d:"Per person",p:750}]}
-  };
-  const dlg=document.getElementById('tix'),tiersEl=document.getElementById('tiers'),totalEl=document.getElementById('tix-total');
-  const form=document.getElementById('tix-form'),done=document.getElementById('tix-done');
-  let cur=null,qty=[];
-  const rand=n=>"R"+n.toLocaleString('en-ZA');
-  function render(){
-    tiersEl.innerHTML=cur.tiers.map((t,i)=>`<div class="tier"><span class="nm">${t.n}</span><span class="pr">${rand(t.p)}</span><span class="ds">${t.d}</span><span class="stepper"><button type="button" data-i="${i}" data-d="-1" aria-label="Fewer ${t.n}">−</button><output>${qty[i]}</output><button type="button" data-i="${i}" data-d="1" aria-label="More ${t.n}">+</button></span></div>`).join('');
-    const tot=cur.tiers.reduce((s,t,i)=>s+t.p*qty[i],0);
-    totalEl.textContent=rand(tot);
-    document.getElementById('tix-pay').disabled=tot===0;
-    document.getElementById('tix-pay').style.opacity=tot===0?.5:1;
-  }
-  tiersEl.addEventListener('click',e=>{const b=e.target.closest('button[data-i]');if(!b)return;const i=+b.dataset.i;qty[i]=Math.max(0,Math.min(10,qty[i]+(+b.dataset.d)));render();});
-  document.querySelectorAll('[data-tickets]').forEach(b=>b.addEventListener('click',()=>{
-    cur=EVENTS[b.dataset.tickets];qty=cur.tiers.map((_,i)=>i===0?1:0);
-    document.getElementById('tix-kicker').textContent=cur.kicker;
-    document.getElementById('tix-title').textContent=cur.title;
-    document.getElementById('tix-when').textContent=cur.when;
-    form.hidden=false;done.hidden=true;render();
-    if(dlg.showModal)dlg.showModal();else dlg.setAttribute('open','');
-  }));
-  document.getElementById('tix-pay').addEventListener('click',()=>{
-    const n=cur.tiers.reduce((s,t,i)=>s+qty[i],0);
-    const name=document.getElementById('t-name').value.trim();
-    document.getElementById('tix-summary').textContent=`${n} item${n>1?'s':''} for ${cur.title}${name?`, booked for ${name}`:''}.`;
-    document.getElementById('tix-ref').textContent="QW-"+Math.random().toString(36).slice(2,8).toUpperCase();
-    form.hidden=true;done.hidden=false;
-  });
-  dlg.addEventListener('click',e=>{if(e.target.closest('[data-close]')||e.target===dlg)dlg.close();});
-
   // Countdown to the Sunset Soirée
   const days=Math.ceil((new Date('2026-11-07T11:00:00+02:00')-new Date())/864e5);
   const cd=document.getElementById('countdown');
