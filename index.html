@@ -315,6 +315,8 @@ form.enq{display:grid;gap:1rem;background:var(--surface);padding:clamp(1.4rem,3v
 .two{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 @media (max-width:820px){.connect-grid{grid-template-columns:1fr}}
 @media (max-width:480px){.two{grid-template-columns:1fr}}
+.enq-to{font-size:.85rem;color:var(--muted)}
+.enq-to strong{color:var(--ink);font-weight:500;user-select:all}
 .ok{font-size:.92rem;color:var(--wine);background:var(--bg);border-radius:10px;padding:.9em 1em;border:1px solid var(--line)}
 
 footer{background:var(--ink);color:var(--bg);padding-block:3rem}
@@ -765,7 +767,8 @@ html{scroll-padding-top:6.5rem}
         </div>
         <div class="field"><label for="e-msg">Message</label><textarea id="e-msg" placeholder="Tell us about your event, date and audience"></textarea></div>
         <button class="btn" type="submit" style="justify-self:start">Send enquiry</button>
-        <p class="ok" id="enq-ok" hidden>Thank you. In the live site this enquiry would go to Linda’s team. This demo does not send messages.</p>
+        <p class="enq-to">Enquiries go to <strong>Maphirilh@gmail.com</strong></p>
+        <p class="ok" id="enq-ok" hidden>Your email app should open with the enquiry ready to send. If it doesn’t, email <strong>Maphirilh@gmail.com</strong> directly.</p>
       </form>
     </div>
   </section>
@@ -775,7 +778,7 @@ html{scroll-padding-top:6.5rem}
   <div class="wrap">
     <div class="big">Linda <i>Maphiri</i></div>
     <div class="legal">
-      <small>Ministry · Philanthropist · Businesswoman · Mother · Wife · Speaker. Tickets are booked through the official Queening &amp; Winning booking form. The enquiry form on this demo is simulated.</small>
+      <small>Ministry · Philanthropist · Businesswoman · Mother · Wife · Speaker. Tickets are booked through the official Queening &amp; Winning booking form. Enquiries open an email to Linda’s team.</small>
       <small><strong>Disclaimer:</strong> This website is a demo concept designed and developed by TGW-Group for presentation purposes only. Design and code © 2026 TGW-Group. All rights reserved. No part of this demo may be copied, reproduced or used without written permission from TGW-Group. Photos and event posters remain the property of their respective owners.</small>
     </div>
   </div>
@@ -872,7 +875,14 @@ html{scroll-padding-top:6.5rem}
   }));
 
   // Enquiry form (demo)
-  document.getElementById('enq').addEventListener('submit',e=>{e.preventDefault();document.getElementById('enq-ok').hidden=false;});
+  document.getElementById('enq').addEventListener('submit',e=>{
+    e.preventDefault();
+    const v=id=>document.getElementById(id).value.trim();
+    const subject=v('e-type')+' enquiry from '+(v('e-name')||'website visitor');
+    const body=['Name: '+v('e-name'),'Organisation: '+v('e-org'),'Email: '+v('e-email'),'Enquiry: '+v('e-type'),'','Message:',v('e-msg')].join('\n');
+    window.location.href='mailto:Maphirilh@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+    document.getElementById('enq-ok').hidden=false;
+  });
 })();
 </script>
 
