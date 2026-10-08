@@ -264,11 +264,11 @@ section{padding-block:clamp(4rem,9vw,7rem)}
 .c-card.feature{background:var(--wine);border-color:var(--wine);color:var(--btn-fg)}
 .c-card.feature .eyebrow{color:var(--btn-fg);opacity:.8}
 .c-card.feature h3{font-size:2.2rem}
-.c-card.feature .copy{border-color:currentColor;color:inherit}
+.c-card.feature .copy-btn{border-color:currentColor;color:inherit}
 .c-card p{color:var(--muted);font-size:.92rem}
 .c-line{display:flex;align-items:center;justify-content:space-between;gap:.8rem;flex-wrap:wrap;font-variant-numeric:tabular-nums;font-size:1.05rem}
 .c-line a,.c-line span{text-decoration:none;overflow-wrap:anywhere;min-width:0}
-.copy{font:500 .68rem/1 var(--f-body);letter-spacing:.14em;text-transform:uppercase;padding:.55em .9em;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--wine);cursor:pointer}
+.copy-btn{font:500 .68rem/1 var(--f-body);letter-spacing:.14em;text-transform:uppercase;padding:.55em .9em;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--wine);cursor:pointer}
 .c-rows{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
 .c-rows > div{display:grid;gap:.25rem;min-width:0}
 .c-rows b{font-family:var(--f-display);font-weight:500;font-size:1.15rem}
@@ -327,6 +327,58 @@ dialog::backdrop{background:rgba(20,6,10,.6);backdrop-filter:blur(3px)}
 .success{text-align:center;display:grid;gap:.8rem;justify-items:center;padding-block:1rem}
 .success .seal{width:5rem;height:5rem;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;font-size:2rem;color:var(--gold)}
 .success code{font-size:1rem;letter-spacing:.12em;background:var(--surface);padding:.4em .8em;border-radius:8px}
+
+/* Phone refinements */
+.mnav{display:none}
+html{scroll-padding-top:6.5rem}
+@media (max-width:900px){
+  .mnav{display:flex;gap:1.3rem;overflow-x:auto;scrollbar-width:none;padding:.15rem 16px .75rem;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
+  .mnav::-webkit-scrollbar{display:none}
+  .mnav a{text-decoration:none;color:var(--muted)}
+}
+@media (max-width:620px){
+  section{padding-block:3.5rem}
+  .sec-head{margin-bottom:1.8rem;gap:1rem}
+  h2{font-size:2.4rem}
+  .ribbon{font-size:.62rem;letter-spacing:.1em}
+  .hero{padding-block:1.5rem 3rem}
+  .hero h1{font-size:4rem;margin-block:.4rem 1rem}
+  .arch{width:min(72%,300px)}
+  .arch .tag{left:-.5rem;bottom:1rem;padding:.6rem .8rem;font-size:.72rem}
+  .hero .ctas .btn{flex:1 1 100%;justify-content:center}
+  .hero .quote{font-size:1.2rem}
+  .marquee{padding-block:.7rem}
+  .story-intro{gap:1.6rem;margin-bottom:2.5rem}
+  .story-intro img{aspect-ratio:1/1;max-width:100%;object-position:50% 12%}
+  .crown{padding:1.3rem 1.2rem 1.4rem;gap:.4rem}
+  .crown h3{font-size:1.35rem}
+  .v-card{padding:1.4rem}
+  .v-card.lead h3{font-size:1.9rem}
+  .pillars div{padding:1rem}
+  .qw::before{font-size:24rem}
+  .featured .body{padding:1.3rem}
+  .facts{grid-template-columns:1fr 1fr;gap:.8rem}
+  .facts div:last-child{grid-column:1/-1}
+  .featured .btn{flex:1 1 100%;justify-content:center}
+  .tabs{flex-wrap:nowrap;overflow-x:auto;margin:2.5rem -16px 1.2rem;padding-inline:16px;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tabs button{white-space:nowrap;flex:none}
+  .past,.p-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:1rem;margin-inline:-16px;padding-inline:16px;padding-bottom:.5rem;scrollbar-width:none}
+  .past::-webkit-scrollbar,.p-grid::-webkit-scrollbar{display:none}
+  .past article,.p-card{flex:0 0 78%;scroll-snap-align:center}
+  .past article[hidden]{display:none}
+  .press{padding-block:1.4rem}
+  .m-row{gap:.5rem;padding:1.2rem 0}
+  .c-card{padding:1.3rem}
+  .c-card.feature h3{font-size:1.8rem}
+  .sp{min-height:6rem;padding:1.1rem .8rem}
+  .sp b{font-size:1.02rem}
+  .social{padding:.9rem 1rem}
+  form.enq{padding:1.3rem}
+  footer .big{font-size:2.4rem}
+}
+.social > div{min-width:0}
+.social b{overflow-wrap:anywhere}
 </style>
 </head>
 <body>
@@ -347,6 +399,9 @@ dialog::backdrop{background:rgba(20,6,10,.6);backdrop-filter:blur(3px)}
     </ul>
     <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScHdT_9bW6CDA5jr48YSxS99A_V3VLoZMJ9Cd24K7tcwCQPgQ/viewform" target="_blank" rel="noopener">Get tickets</a>
   </div>
+  <nav class="mnav" aria-label="Sections">
+    <a href="#story">Her Story</a><a href="#ventures">Business</a><a href="#qw">Queening &amp; Winning</a><a href="#events">Events</a><a href="#projects">Projects</a><a href="#media">Media</a><a href="#contacts">Contacts</a>
+  </nav>
 </header>
 
 <main id="top">
@@ -595,27 +650,27 @@ dialog::backdrop{background:rgba(20,6,10,.6);backdrop-filter:blur(3px)}
         <article class="c-card wide feature">
           <span class="eyebrow">Personal Assistant · For meeting bookings</span>
           <h3>Isaiah Ndlovu</h3>
-          <div class="c-line"><a href="tel:+27786229552">+27 78 622 9552</a><button type="button" class="copy" data-copy="+27 78 622 9552">Copy</button></div>
+          <div class="c-line"><a href="tel:+27786229552">+27 78 622 9552</a><button type="button" class="copy-btn" data-copy="+27 78 622 9552">Copy</button></div>
         </article>
         <article class="c-card">
           <span class="eyebrow">Ican Park New Complex · Rentals</span>
           <h3>Saida Molepo</h3>
           <p>Rawson Properties · For rental queries</p>
-          <div class="c-line"><a href="tel:+27824308428">+27 82 430 8428</a><button type="button" class="copy" data-copy="+27 82 430 8428">Copy</button></div>
+          <div class="c-line"><a href="tel:+27824308428">+27 82 430 8428</a><button type="button" class="copy-btn" data-copy="+27 82 430 8428">Copy</button></div>
         </article>
         <article class="c-card">
           <span class="eyebrow">Combat Security</span>
           <h3>Combat Security</h3>
           <p>Unit 1, Lezmin Building, 8 Pierre Street, Bendor Park, Polokwane, 0699</p>
-          <div class="c-line"><a href="tel:+27158802399">015 880 2399</a><button type="button" class="copy" data-copy="015 880 2399">Copy</button></div>
-          <div class="c-line"><span>admin@combatsecurity.co.za</span><button type="button" class="copy" data-copy="admin@combatsecurity.co.za">Copy</button></div>
+          <div class="c-line"><a href="tel:+27158802399">015 880 2399</a><button type="button" class="copy-btn" data-copy="015 880 2399">Copy</button></div>
+          <div class="c-line"><span>admin@combatsecurity.co.za</span><button type="button" class="copy-btn" data-copy="admin@combatsecurity.co.za">Copy</button></div>
         </article>
         <article class="c-card wide">
           <span class="eyebrow">Sasol Stations</span>
           <div class="c-rows">
-            <div><b>Sasol Pyramid</b><span>Makgoba Johannes</span><div class="c-line"><a href="tel:+27711811379">+27 71 181 1379</a><button type="button" class="copy" data-copy="+27 71 181 1379">Copy</button></div></div>
-            <div><b>Sasol Jorrisen</b><span>Tshepo Mathatho</span><div class="c-line"><a href="tel:+27643674208">+27 64 367 4208</a><button type="button" class="copy" data-copy="+27 64 367 4208">Copy</button></div></div>
-            <div><b>Sasol R71 Eastridge</b><span>Mathapelo Mojapelo</span><div class="c-line"><a href="tel:+27791853056">+27 79 185 3056</a><button type="button" class="copy" data-copy="+27 79 185 3056">Copy</button></div></div>
+            <div><b>Sasol Pyramid</b><span>Makgoba Johannes</span><div class="c-line"><a href="tel:+27711811379">+27 71 181 1379</a><button type="button" class="copy-btn" data-copy="+27 71 181 1379">Copy</button></div></div>
+            <div><b>Sasol Jorrisen</b><span>Tshepo Mathatho</span><div class="c-line"><a href="tel:+27643674208">+27 64 367 4208</a><button type="button" class="copy-btn" data-copy="+27 64 367 4208">Copy</button></div></div>
+            <div><b>Sasol R71 Eastridge</b><span>Mathapelo Mojapelo</span><div class="c-line"><a href="tel:+27791853056">+27 79 185 3056</a><button type="button" class="copy-btn" data-copy="+27 79 185 3056">Copy</button></div></div>
           </div>
         </article>
         <article class="c-card">
@@ -630,13 +685,13 @@ dialog::backdrop{background:rgba(20,6,10,.6);backdrop-filter:blur(3px)}
         <article class="c-card">
           <span class="eyebrow">Sediba SPAR Express Shell Garage</span>
           <h3>Mapula Malele &amp; Andro Chuene</h3>
-          <div class="c-line"><a href="tel:+27820667132">082 066 7132</a><button type="button" class="copy" data-copy="082 066 7132">Copy</button></div>
-          <div class="c-line"><a href="tel:+27818193849">+27 81 819 3849</a><button type="button" class="copy" data-copy="+27 81 819 3849">Copy</button></div>
+          <div class="c-line"><a href="tel:+27820667132">082 066 7132</a><button type="button" class="copy-btn" data-copy="082 066 7132">Copy</button></div>
+          <div class="c-line"><a href="tel:+27818193849">+27 81 819 3849</a><button type="button" class="copy-btn" data-copy="+27 81 819 3849">Copy</button></div>
         </article>
         <article class="c-card">
           <span class="eyebrow">Khudu Investment Holdings</span>
           <h3>Email</h3>
-          <div class="c-line"><span>Maphirilh@gmail.com</span><button type="button" class="copy" data-copy="Maphirilh@gmail.com">Copy</button></div>
+          <div class="c-line"><span>Maphirilh@gmail.com</span><button type="button" class="copy-btn" data-copy="Maphirilh@gmail.com">Copy</button></div>
         </article>
       </div>
     </div>
@@ -760,7 +815,7 @@ dialog::backdrop{background:rgba(20,6,10,.6);backdrop-filter:blur(3px)}
   art.addEventListener('click',e=>{if(e.target.closest('[data-close]')||e.target===art)art.close();});
 
   // Copy contact details
-  document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.copy-btn').forEach(b=>b.addEventListener('click',()=>{
     const done=()=>{b.textContent='Copied';setTimeout(()=>b.textContent='Copy',1600);};
     const fallback=()=>{const r=document.createRange();r.selectNodeContents(b.previousElementSibling);const sel=getSelection();sel.removeAllRanges();sel.addRange(r);};
     try{navigator.clipboard.writeText(b.dataset.copy).then(done,fallback);}catch(e){fallback();}
