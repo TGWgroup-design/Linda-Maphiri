@@ -4,7 +4,7 @@ A personal brand website concept for Linda Maphiri: her story, businesses, Queen
 
 Open `index.html` in a browser, or view it on GitHub Pages once enabled (Settings → Pages → Deploy from branch → `main` / root).
 
-Ticket buttons open the official Queening & Winning booking form. The booking enquiry form opens an email to Maphirilh@gmail.com.
+Ticket buttons open the official Queening & Winning booking page on TGW Events. The booking enquiry form opens an email to Maphirilh@gmail.com.
 
 ## Copyright
 
